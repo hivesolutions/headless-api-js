@@ -1,6 +1,6 @@
 {
-    "name": "headless-api",
-    "version": "0.0.1",
+    "name": "headless-api-js",
+    "version": "0.1.0",
     "description": "The Headless API client",
     "keywords": [
         "api",
