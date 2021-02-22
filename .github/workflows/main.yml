@@ -1,0 +1,20 @@
+name: Main Workflow
+on: [push]
+jobs:
+  build:
+    name: Build
+    strategy:
+      matrix:
+        node-version: [10, 11, 12, 13, 14]
+    runs-on: ubuntu-latest
+    container: node:${{ matrix.node-version }}
+    steps:
+      - uses: actions/checkout@v1
+      - run: apt-get update && apt-get install -y mongodb && mkdir -p /data/db
+      - run: mongod &
+      - run: node --version
+      - run: npm install
+      - run: npm install --only=dev
+      - run: npm run build
+      - run: npm run lint
+      - run: MONGO_URL=mongodb://localhost/test npm test
