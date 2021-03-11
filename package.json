@@ -18,8 +18,8 @@
     },
     "license": "Apache-2.0",
     "author": {
-        "name": "Platforme",
-        "url": "https://www.platforme.com"
+        "name": "Hive Solutions",
+        "url": "https://www.hive.pt"
     },
     "main": "dist/headless.cjs.js",
     "unpkg": "dist/headless.umd.js",
