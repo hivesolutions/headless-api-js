@@ -40,6 +40,20 @@ export class API extends BaseAPI {
     }
 
     /**
+     * Returns a page rendered by Headless.
+     *
+     * @param {Object} options An object of options to configure the query and
+     * its results.
+     * @returns {Promise} The page rendering result promise.
+     */
+    async postIndex(options = {}) {
+        const urlParams = new URLSearchParams(options.params);
+        const url = `${this.baseUrl}?${urlParams.toString()}`;
+        const contents = await this.post(url, { dataJ: options.payload });
+        return contents;
+    }
+
+    /**
      * Gets the information about Headless, such as version, engines, etc.
      * @returns {Promise} The info result promise.
      */
