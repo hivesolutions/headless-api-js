@@ -29,13 +29,39 @@ export class API extends BaseAPI {
     /**
      * Returns a page rendered by Headless.
      *
-     * @param {Object} options An object of options to configure the query and
-     * its results.
+     * @param {Object} options An object of options to configure the
+     * query and its results.
      * @returns {Promise} The page rendering result promise.
      */
     async index(options = {}) {
         const url = this.baseUrl;
         const contents = await this.get(url, options);
+        return contents;
+    }
+
+    /**
+     * Returns a page rendered by Headless, uses POST as method.
+     *
+     * @param {Object} options An object of options to configure the
+     * query and its results.
+     * @returns {Promise} The page rendering result promise.
+     */
+    async postIndex(options = {}) {
+        const url = this.baseUrl;
+        const contents = await this.post(url, options);
+        return contents;
+    }
+
+    /**
+     * Returns a page rendered by Headless, uses PUT as method.
+     *
+     * @param {Object} options An object of options to configure the
+     * query and its results.
+     * @returns {Promise} The page rendering result promise.
+     */
+    async putIndex(options = {}) {
+        const url = this.baseUrl;
+        const contents = await this.put(url, options);
         return contents;
     }
 
