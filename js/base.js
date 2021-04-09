@@ -10,9 +10,9 @@ export class API extends BaseAPI {
     constructor(kwargs = {}) {
         super(kwargs);
         this.baseUrl = conf("HEADLESS_BASE_URL", HEADLESS_BASE_URL);
-        this.token = conf("HEADLESS_TOKEN", null);
+        this.key = conf("HEADLESS_KEY", null);
         this.baseUrl = kwargs.baseUrl === undefined ? this.baseUrl : kwargs.baseUrl;
-        this.token = kwargs.token === undefined ? this.token : kwargs.token;
+        this.key = kwargs.key === undefined ? this.key : kwargs.key;
     }
 
     static async load() {
@@ -22,11 +22,8 @@ export class API extends BaseAPI {
     async build(method, url, options = {}) {
         await super.build(method, url, options);
         options.headers = options.params !== undefined ? options.headers : {};
-        options.kwargs = options.kwargs !== undefined ? options.kwargs : {};
-        const auth = options.kwargs.auth === undefined ? true : options.kwargs.auth;
-        delete options.kwargs.auth;
-        if (auth) {
-            options.headers.Authorization = `Bearer ${this.token}`;
+        if (this.key) {
+            options.headers["X-Headless-Key"] = this.key;
         }
     }
 
