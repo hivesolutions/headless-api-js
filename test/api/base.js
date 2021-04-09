@@ -6,6 +6,6 @@ describe("API", function() {
         const api = new headless.API();
 
         assert.strictEqual(Boolean(api.baseUrl), true);
-        assert.strictEqual(api.token, null);
+        assert.strictEqual(api.key, null);
     });
 });
