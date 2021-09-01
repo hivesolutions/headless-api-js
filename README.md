@@ -24,7 +24,7 @@ Headless API Javascript is currently licensed under the [Apache License, Version
 
 ## Build Automation
 
-[![Build Status](https://travis-ci.com/hivesolutions/headless_api_js.svg?branch=master)](https://travis-ci.com/hivesolutions/headless_api_js)
+[![Build Status](https://app.travis-ci.com/hivesolutions/headless_api_js.svg?branch=master)](https://travis-ci.com/github/hivesolutions/headless_api_js)
 [![Build Status GitHub](https://github.com/hivesolutions/headless_api_js/workflows/Main%20Workflow/badge.svg)](https://github.com/hivesolutions/headless_api_js/actions)
 [![npm Status](https://img.shields.io/npm/v/headless-api-js.svg)](https://www.npmjs.com/package/headless-api-js)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://www.apache.org/licenses/)
