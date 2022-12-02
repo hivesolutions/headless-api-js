@@ -8,13 +8,13 @@
         "js",
         "headless"
     ],
-    "homepage": "https://github.com/hivesolutions/headless_api_js#readme",
+    "homepage": "https://github.com/hivesolutions/headless-api-js#readme",
     "bugs": {
-        "url": "https://github.com/hivesolutions/headless_api_js/issues"
+        "url": "https://github.com/hivesolutions/headless-api-js/issues"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/hivesolutions/headless_api_js.git"
+        "url": "git+https://github.com/hivesolutions/headless-api-js.git"
     },
     "license": "Apache-2.0",
     "author": {
