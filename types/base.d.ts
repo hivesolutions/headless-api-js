@@ -1,6 +1,5 @@
-export interface API {}
+import { API as BaseAPI } from "yonius";
 
-export declare class API implements API {
-    constructor(kwargs?: object);
+export declare class API extends BaseAPI {
     info(): Promise<object>;
 }
