@@ -1,5 +1,5 @@
 const assert = require("assert");
-const headless = require("../../types");
+const headless = require("../..");
 
 describe("API", function() {
     it("should be able to instantiate the API", async () => {
