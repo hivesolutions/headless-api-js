@@ -21,7 +21,8 @@
         "name": "Hive Solutions",
         "url": "https://www.hive.pt"
     },
-    "main": "dist/headless.cjs.js",
+    "type": "module",
+    "main": "dist/headless.cjs",
     "unpkg": "dist/headless.umd.js",
     "module": "dist/headless.esm.js",
     "browser": "dist/headless.umd.js",
@@ -32,42 +33,43 @@
         "dist/**/*",
         "res/**/*",
         "js/**/*.js",
-        "test/**/*.js",
+        "test/**/*.{js,cjs,mjs}",
         "types/**/*.ts"
     ],
     "scripts": {
         "build": "rollup -c",
         "docs": "jsdoc js -r -c ./jsdoc.json -R ./README.md",
         "example": "node examples/simple.js",
-        "lint": "eslint rollup.config.js \"./{js,test}/**/*.{js,json}\"",
-        "lint-fix": "eslint rollup.config.js \"./{js,test}/**/*.{js,json}\" --fix",
-        "prettier": "prettier rollup.config.js \"./*.{js,json}\" \"./{js,test}/**/*.{js,json}\" --write",
-        "pretty": "npm run prettier && npm run lint-fix",
+        "lint": "eslint rollup.config.js \"./{js,test}/**/*.{js,cjs,mjs,json}\"",
+        "lint-fix": "eslint rollup.config.js \"./{js,test}/**/*.{js,cjs,mjs,json}\" --fix",
         "now-build": "npm run docs",
+        "prettier": "prettier rollup.config.js \"./*.{js,cjs,mjs,json}\" \"./{js,test}/**/*.{js,cjs,mjs,json}\" --write",
+        "pretty": "npm run prettier && npm run lint-fix",
         "test": "mocha --recursive",
         "upgrade": "npx sort-package-json && ncu -u",
         "watch": "rollup -c -w"
     },
     "dependencies": {
-        "yonius": "^0.7.6"
+        "yonius": "^0.13.0"
     },
     "devDependencies": {
-        "@babel/core": "^7.13.14",
-        "@babel/preset-env": "^7.13.12",
-        "@rollup/plugin-babel": "^5.3.0",
-        "@rollup/plugin-commonjs": "^18.0.0",
-        "@rollup/plugin-node-resolve": "^11.2.1",
-        "eslint": "^7.23.0",
-        "eslint-config-hive": "^0.5.3",
-        "jsdoc": "^3.6.6",
+        "@babel/core": "^7.21.0",
+        "@babel/preset-env": "^7.20.2",
+        "@rollup/plugin-babel": "^6.0.3",
+        "@rollup/plugin-commonjs": "^24.0.1",
+        "@rollup/plugin-node-resolve": "^15.0.1",
+        "eslint": "^8.34.0",
+        "eslint-config-hive": "^0.6.0",
+        "eslint-plugin-n": "^15.6.1",
+        "jsdoc": "^4.0.2",
         "minami": "^1.2.3",
-        "mocha": "^8.3.2",
+        "mocha": "^10.2.0",
         "mocha-cli": "^1.0.1",
-        "npm-check-updates": "^11.3.0",
-        "prettier": "^2.2.1",
+        "npm-check-updates": "^16.7.5",
+        "prettier": "^2.8.4",
         "prettier-config-hive": "^0.1.7",
-        "rollup": "^2.44.0",
+        "rollup": "^3.17.2",
         "rollup-plugin-node-polyfills": "^0.2.1",
-        "sort-package-json": "^1.49.0"
+        "sort-package-json": "^2.4.1"
     }
 }
