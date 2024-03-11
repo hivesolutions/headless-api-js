@@ -28,7 +28,7 @@ export class API extends BaseAPI {
     }
 
     /**
-     * Returns a page rendered by Headless.
+     * Returns a page rendered by Headless, uses GET as method.
      *
      * @param {Object} options An object of options to configure the
      * query and its results.
