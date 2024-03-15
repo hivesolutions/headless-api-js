@@ -1,4 +1,4 @@
-# Headless API Javascript
+# Headless API (for Javascript)
 
 The [Headless](https://github.com/hivesolutions/headless) Javascript client.
 
