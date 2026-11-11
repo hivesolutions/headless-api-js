@@ -4,7 +4,7 @@ import { API as BaseAPI, load, conf } from "yonius";
  * The default base URL to be used in accessing the
  * Headless API infra-structure.
  */
-const HEADLESS_BASE_URL = "http://headless.bemisc.com/";
+const HEADLESS_BASE_URL = "https://headless.bemisc.com/";
 
 export class API extends BaseAPI {
     constructor(kwargs = {}) {
