@@ -21,7 +21,7 @@ export class API extends BaseAPI {
 
     async build(method, url, options = {}) {
         await super.build(method, url, options);
-        options.headers = options.params !== undefined ? options.headers : {};
+        options.headers = options.headers !== undefined ? options.headers : {};
         if (this.key) {
             options.headers["X-Headless-Key"] = this.key;
         }
