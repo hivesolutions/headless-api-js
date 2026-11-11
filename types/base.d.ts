@@ -8,6 +8,7 @@ export type APIOptions = {
     data?: BodyInit | JSON;
     dataJ?: JSON;
     dataM?: Record<string, unknown>;
+    mime?: string;
 };
 
 export declare class API extends BaseAPI {
