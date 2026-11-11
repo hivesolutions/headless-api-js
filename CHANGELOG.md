@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-*
+* Tests run on Node.js 16 to 26 and on Bun
 
 ### Fixed
 
